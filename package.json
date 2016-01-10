@@ -3,7 +3,14 @@
   "description": "Clean template for groc documentation generator.",
   "author": "Joshua Toenyes <joshua.toenyes@me.com>",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "fs-tools": "^0.2.11",
+    "coffee-script": "~1.10",
+    "jade": "^1.11.0",
+    "lodash": "^3.10.1",
+    "uglify-js": "^2.6.1",
+    "groc": "https://github.com/JoshuaToenyes/groc.git"
+  },
   "devDependencies": {},
   "scripts": {}
 }
