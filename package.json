@@ -1,0 +1,9 @@
+{
+  "name": "groc-template-clean",
+  "description": "Clean template for groc documentation generator.",
+  "author": "Joshua Toenyes <joshua.toenyes@me.com>",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {}
+}
