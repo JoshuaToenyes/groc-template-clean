@@ -45,7 +45,7 @@ $tools-background-color: #eee //transparentize(#e6e6e6, 0.1)
 $tools-foreground-color: #4a525a
 $tools-shadow-color:     #f0f0f0
 
-$inline-code-background-color: #fbf8f3
+$inline-code-background-color: #efefef
 
 // ### Typography
 
@@ -59,6 +59,7 @@ $inline-code-background-color: #fbf8f3
   font-family: "Droid Sans Mono", Menlo, Monaco, monospace
   font-size:   0.75em
   line-height: 1.4
+  color: rgba(black, 0.85)
 
 =header-font
   font-family:    "Helvetica Neue", Helvetica, "Droid Sans", sans-serif
@@ -374,8 +375,9 @@ nav.searching .toc .discloser
   +header-font-sizes
 
   p
-    margin: 1em 0
-    font-size: 0.9em
+    margin: 0 0 1.7em
+    font-size: 1em
+    line-height: 1.7em
 
   > *
     &:first-child
@@ -538,8 +540,12 @@ nav
       &:hover
         background: darken($tools-background-color, 10%)
 
-    .file > .label
+    .folder > .label
       font-weight: bold
+
+    .file > .label
+      font-size: 0.9em
+      font-weight: 400
 
     .selected > .label
       background: $commentary-background-color
@@ -584,10 +590,10 @@ nav
 
   code
     +code-font
-    border: 1px solid darken(desaturate($inline-code-background-color, 25%), 10%)
+    //border: 1px solid darken(desaturate($inline-code-background-color, 25%), 10%)
 
   pre, code
-    +border-radius(0.4em)
+    +border-radius(0.2em)
     background: $inline-code-background-color
 
   pre
