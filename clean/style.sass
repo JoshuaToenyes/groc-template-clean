@@ -57,7 +57,7 @@ $inline-code-background-color: #efefef
 
 =code-font
   font-family: "Droid Sans Mono", Menlo, Monaco, monospace
-  font-size:   0.75em
+  font-size:   0.9em
   line-height: 1.4
   color: rgba(black, 0.85)
 
@@ -128,6 +128,11 @@ body
 
   .code
     white-space: pre
+    font-size: 0.83em
+    opacity: 0.9
+
+.doc-section ~ .code
+  margin-top: 4em
 
 // Fit the meta info into the code column
 #meta
@@ -387,7 +392,7 @@ nav.searching .toc .discloser
       margin-bottom: 0
 
   ol, ul
-    padding-left: 1.75em
+    padding-left: 1em
     margin: 1em 0
 
   ol li
@@ -631,6 +636,45 @@ input[type="search"]
   //  .wrapper
   //    color: #252519
 
+  p.param
+    margin-bottom: 0.2em
+    font-weight: 400
+
+    code
+      font-weight: bold
+
+  .doc-section-heading
+    margin: 2em 0 0
+    font-weight: bold
+    font-size: 1.1em
+    border-top: 1px solid #ddd
+    padding-top: 1em
+
+  .doc-section-sub-heading
+    margin: 2em 0 1em
+    font-weight: 500
+
+    code
+      font-weight: bold
+
+  .doc-section-sub-heading.returns
+    margin-bottom: 0
+
+  .description,
+  .returns-description
+    margin: 0 0 2em 0
+
+  .description
+    padding-top: 0.2em
+    border-top: 1px solid #eeeeee
+
+  .todo
+    background-color: lighten(#D4ABAC, 15%)
+    padding: 1em
+
+    code
+      background-color: lighten(#D4ABAC, 10%)
+
   .wrapper
     color: #252519
 
@@ -647,6 +691,10 @@ input[type="search"]
 
   .docs .doc-section-header code
     font-size: 18px
+
+  ul li
+    font-size: 0.9em
+    list-style: none
 
 // ## Code folding
 

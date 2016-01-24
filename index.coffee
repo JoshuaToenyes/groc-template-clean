@@ -135,23 +135,25 @@ module.exports = (Base) -> class Default extends Base
         secondPart.push tag.markdown for tag in sections.metadata if sections.metadata?
         metaOutput += " #{humanize.joinSentence secondPart}"
 
-      output += "<span class='doc-section-header'>#{metaOutput}</span>\n\n" if metaOutput isnt ''
+      output += "<p class='doc-section-heading'>#{metaOutput}</p>\n\n" if metaOutput isnt ''
 
       output += "#{tag.markdown}\n\n" for tag in sections.description if sections.description?
 
       output += "#{tag.markdown}\n\n" for tag in sections.todo if sections.todo?
 
       if sections.params?
-        output += 'Parameters:\n\n'
+        output += '<p class="doc-section-sub-heading">Parameters:</p>\n\n'
         output += "#{tag.markdown}\n\n" for tag in sections.params
 
       if sections.returns?
-        output += (humanize.capitalize(tag.markdown) for tag in sections.returns if sections.returns?).join('<br/>**and** ')
+        output += (tag.markdown for tag in sections.returns if sections.returns?).join('<br/>**and** ')
 
       if sections.howto?
         output += "\n\nHow-To:\n\n#{humanize.gutterify tag.markdown, 0}" for tag in sections.howto
 
       if sections.example?
         output += "\n\nExample:\n\n#{humanize.gutterify tag.markdown, 4}" for tag in sections.example
+
+      console.log output
 
       segment.comments = output.split '\n'
